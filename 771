@@ -1,0 +1,31 @@
+First day practice at: https://leetcode.com/problems/jewels-and-stones/description/
+
+class Solution(object):
+    def numJewelsInStones(self, J, S):
+        """
+        :type J: str
+        :type S: str
+        :rtype: int
+        """
+        count = 0
+        
+        list_jew = []
+        list_me = []
+        
+        for i in range(len(J)):
+            list_jew.append(J[i])
+            
+        for j in range(len(S)):
+            list_me.append(S[j])
+            
+#         print list_jew
+#         print list_me
+            
+        for item in list_me:
+            if  item in list_jew:
+                count += 1
+        # print count
+        return count
+        
+        
+should have noticed that strings could not be iterated using "item in string blah blah"
